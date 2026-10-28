@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>DraftDesk — Undo & Redo</title><link rel="stylesheet" href="style.css"></head>
+<body><main class="shell">
+<header class="topbar"><div class="brand-mark">D</div><div><h1>DraftDesk</h1><p>Document Editor</p></div><span class="status" id="save-status">Ready</span></header>
+<section class="intro"><p class="eyebrow">DATA STRUCTURES PROJECT</p><h2>Write. Edit. Undo. Redo.</h2><p>A simple document editor demonstrating how stacks keep track of editing history.</p></section>
+<section class="workspace"><div class="toolbar"><div class="history-buttons"><button id="undo-btn" type="button" title="Undo (Ctrl+Z)">↶ <span>Undo</span></button><button id="redo-btn" type="button" title="Redo (Ctrl+Y)">↷ <span>Redo</span></button></div><span class="divider"></span><button id="clear-btn" class="subtle" type="button">Clear document</button><button id="sample-btn" class="subtle" type="button">Load sample</button></div>
+<label class="doc-label" for="editor">DOCUMENT CONTENT</label><textarea id="editor" spellcheck="true" placeholder="Start typing your document here...">Welcome to DraftDesk!
+
+This simple document editor demonstrates a real-world use of stacks.
+
+Try typing a sentence, then press Undo to restore the previous text. Press Redo to bring the change back.</textarea>
+<div class="editor-footer"><span id="word-count">Words: 0</span><span id="char-count">Characters: 0</span><span id="history-count">Undo history: 0</span></div></section>
+<section class="explain"><div><p class="eyebrow">STACK CONCEPT</p><h3>How editing history works</h3><p>Before a change is made, the current document is pushed onto the undo stack. Undo pops the latest saved version onto the editor and pushes the current version onto the redo stack. Redo reverses that process.</p></div>
+<div class="mini-stack"><div class="stack-title">UNDO STACK · LIFO</div><div class="stack-item top">Most recent version <b>TOP</b></div><div class="stack-item">Earlier version</div><div class="stack-item">Oldest version</div></div></section>
+<footer>Built with HTML, CSS and JavaScript · Changes are stored in memory while this page is open.</footer></main><script src="script.js"></script></body></html>
